@@ -73,8 +73,8 @@ class PostsController < ApplicationController
     end
     # This for filter
     def authenticate
-        authenticate_or_request_with_http_basic do |name, password|
-          name == "admin" && password == "select"
+        authenticate_or_request_with_http_basic do |username, password|
+          username == "admin" && password == "secret"
         end
     end
 end
